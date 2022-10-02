@@ -22,7 +22,7 @@ const addMonth = (body) => {
 
 async function getMonth() {
     try {
-        const {data:response} = await axios.get('${baseURL}/month/')
+        const {data:response} = await axios.get(`${baseURL}/month/`)
         return response
       }
       catch (error) {
