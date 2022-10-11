@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { rankTable } from './values';
 
-const baseURL = `https://cts-report-card-backend-production.up.railway`
+const baseURL = `https://cts-report-card-backend-production.up.railway.app`
 
 async function getAllEvents() {
   try {
