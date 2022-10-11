@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { events } from './values';
 const { toast } = require('tailwind-toast')
 
 const baseURL = `https://cts-report-card-backend-production.up.railway.app`
@@ -29,6 +30,7 @@ async function getEvent() {
       catch (error) {
         console.log(error);
       }
+      return events.events
 
 }
 

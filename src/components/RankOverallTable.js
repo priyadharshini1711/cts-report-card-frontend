@@ -25,7 +25,7 @@ export default function RankOverallTable() {
             } else {
                 obj["coordinated"] = 0
             }
-            obj["total"] = obj.mark + (10 * obj.topped) + (10 * obj.coordinated)
+            obj["total"] = parseInt(obj.mark) + parseInt(10 * obj.topped) + parseInt(10 * obj.coordinated)
             data.push(obj)
         })
 

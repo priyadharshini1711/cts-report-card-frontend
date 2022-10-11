@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { dashboard } from './values';
 
-const baseURL = `https://cts-report-card-backend-production.up.railway.app`
+let baseURL = `https://cts-report-card-backend-production.up.railway.app`
 
 async function getEventsDashboard() {
   try {
@@ -8,8 +9,9 @@ async function getEventsDashboard() {
     return response
   }
   catch (error) {
-    console.log(error);
+    console.log("error", error);
   }
+  return dashboard.events
 }
 
 async function getRMD() {
@@ -20,6 +22,7 @@ async function getRMD() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.rmd
 }
 
 async function getSCSVMV() {
@@ -30,6 +33,7 @@ async function getSCSVMV() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.scsvmv
 }
 
 async function getVEC() {
@@ -40,6 +44,7 @@ async function getVEC() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.vec
 }
 
 async function getRMKCET() {
@@ -50,6 +55,7 @@ async function getRMKCET() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.rmkcet
 }
 
 async function getSJIT() {
@@ -60,6 +66,7 @@ async function getSJIT() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.sjit
 }
 
 async function getSATHYABAMA() {
@@ -70,6 +77,7 @@ async function getSATHYABAMA() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.sathyabama
 }
 
 async function getRMKEC() {
@@ -80,6 +88,7 @@ async function getRMKEC() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.rmkec
 }
 
 async function getSJCE() {
@@ -90,6 +99,7 @@ async function getSJCE() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.sjce
 }
 
 async function getVIT() {
@@ -100,6 +110,7 @@ async function getVIT() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.vit
 }
 
 async function getMSEC() {
@@ -110,6 +121,7 @@ async function getMSEC() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.msec
 }
 
 async function getSRM() {
@@ -120,6 +132,7 @@ async function getSRM() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.srm
 }
 
 async function getSVCE() {
@@ -130,6 +143,7 @@ async function getSVCE() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.svce
 }
 
 async function getSSN() {
@@ -140,6 +154,7 @@ async function getSSN() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.ssn
 }
 
 async function getVIT_UNIV() {
@@ -150,17 +165,18 @@ async function getVIT_UNIV() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.vit_univ
 }
 
 async function getHighestMark() {
   try {
     const { data: response } = await axios.get(`${baseURL}/dashboard/highest/mark/`)
-    console.log("calling api")
     return response
   }
   catch (error) {
     console.log(error);
   }
+  return dashboard.highestMark
 }
 
 async function getHighestCoordinated() {
@@ -171,6 +187,7 @@ async function getHighestCoordinated() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.highestCoordinated
 }
 
 async function getHighestTopped() {
@@ -181,6 +198,7 @@ async function getHighestTopped() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.highestTopped
 }
 
 async function getHighestNominated() {
@@ -191,6 +209,7 @@ async function getHighestNominated() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.highestNominated
 }
 
 async function getMonthStar() {
@@ -201,6 +220,7 @@ async function getMonthStar() {
   catch (error) {
     console.log(error);
   }
+  return dashboard.monthStar
 }
 
 export {

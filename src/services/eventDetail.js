@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { college_events } from './values';
 const { toast } = require('tailwind-toast')
 
 const baseURL = `https://cts-report-card-backend-production.up.railway.app`
@@ -12,6 +13,7 @@ async function getEventDetail(college_month_event_id) {
       catch (error) {
         console.log(error);
       }
+      return college_events.event_detail
 }
 
 async function getEventStar(college_month_event_id) {
@@ -22,6 +24,7 @@ async function getEventStar(college_month_event_id) {
       catch (error) {
         console.log(error);
       }
+      return college_events.event_star
 }
 
 async function updateEventDetail(body){

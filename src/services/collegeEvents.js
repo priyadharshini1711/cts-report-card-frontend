@@ -1,5 +1,6 @@
 
 import axios from 'axios';
+import { college_events } from './values';
 
 const baseURL = `https://cts-report-card-backend-production.up.railway.app`
 
@@ -12,6 +13,7 @@ async function getCollegeEvents(college_id, month_id) {
       catch (error) {
         console.log(error);
       }
+      return college_events.events
 
 }
 

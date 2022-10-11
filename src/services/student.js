@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { student } from './values';
 const { toast } = require('tailwind-toast')
 
 const baseURL = `https://cts-report-card-backend-production.up.railway.app`
@@ -28,6 +29,7 @@ async function getStudent() {
       catch (error) {
         console.log(error);
       }
+      return student.student
 
 }
 

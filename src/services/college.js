@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { college } from './values';
 const { toast } = require('tailwind-toast')
 
 const baseURL = `https://cts-report-card-backend-production.up.railway.app`
@@ -28,7 +29,7 @@ async function getCollege() {
       catch (error) {
         console.log(error);
       }
-
+      return college.college
 }
 
 const editCollege = (body) => {
